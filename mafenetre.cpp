@@ -93,16 +93,14 @@ void MaFenetre::on_chiffre4_valueChanged(int arg1)
 
 void MaFenetre::on_pb_Stocker_released()
 {
-    int chiffre1 = 2;
-    int chiffre2 = 4;
-    int chiffre3 = 1;
-    int chiffre4 = 3;
+    int chiffre1 = 0;
+    int chiffre2 = 0;
+    int chiffre3 = 0;
+    int chiffre4 = 0;
 
     int stock = 0;
 
-
-    //m_entree.clear();
-
+    //Récupération des chiffres entrés par l'utilisateur
     chiffre1 = ui->chiffre1->value();
     chiffre2 = ui->chiffre2->value();
     chiffre3 = ui->chiffre3->value();
@@ -152,6 +150,7 @@ void MaFenetre::on_pb_Stocker_released()
         chiffre2 = stock;
     }
 
+    //Affichage des chiffres triés
     ui->lcdNumber->display(chiffre1);
     ui->lcdNumber2->display(chiffre2);
     ui->lcdNumber3->display(chiffre3);
